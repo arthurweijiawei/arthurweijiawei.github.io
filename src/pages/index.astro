@@ -1,16 +1,159 @@
 ---
-
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Section from "../components/Section.astro";
+import Footer from '../components/Footer.astro'
 ---
+<BaseLayout pageTitle="Home">
+<Section
+  id="hero"
+  background="/background.jpg" 
+>
+<p style="font-size: 1.6rem; font-weight: bold;">
+  We have a responsibility to ensure that AI not only drives economic growth but also promotes social and environmental sustainability.
+</p>
+  <p style="font-size: 1.6rem; font-weight: 500; text-align: right;"> -- Jensen Huang (NVIDIA founder and CEO)</p>
+</Section>
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> -->
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<section id="about" class="about-section">
+  <div class="container">
+      <h2 class="title">About</h2>
+  <div class="about-container">
+    <img src="/profile.jpg" alt="Jiawei Wei" class="avatar" />
+    <div class="about-text">
+      <p>Hi there! My name is Jiawei Wei (Arthur). I am working for a startup, Eco-treasure Dynamic International (Hong Kong) Limited,
+         as an IT Director.</p>
+      <p>
+        In 2024, I worked as a research assistant at Texas A&M University. Prior to that, I served as a research assistant at State Key laboratory
+        of Lake Science and Environment, Chinese Academy of Sciences. I obtained my Master's degree from Southern University of Science and Technology,
+        advised by Prof. Lian Feng in 2022. I received my Bachelor's degree from Nanjing Tech University in 2019.
+      </p>
+      <p>
+        My career goal is to develop and apply AI solutions to address real world issues related to environment, climate change, ecology, and agriculture.
+      </p>
+      <p>
+      Reach out to me via Email: 
+      <a href="mailto:jiaweiweiarthur@gmail.com">jiaweiweiarthur@gmail.com</a>
+      </p>
+
+      <p style="display: flex; gap: 1rem; flex-wrap: wrap;">
+        <a href="#" style="display: flex; align-items: center; gap: 6px;">
+          <img src="/icons/googlescholar.svg" alt="Google Scholar" width="30" height="30" />
+          Google Scholar
+        </a>
+        <a href="#" style="display: flex; align-items: center; gap: 6px;">
+          <img src="/icons/github.svg" alt="GitHub" width="30" height="30" />
+          GitHub
+        </a>
+        <a href="#" style="display: flex; align-items: center; gap: 6px;">
+          <img src="/icons/linkedin.svg" alt="LinkedIn" width="30" height="30" />
+          LinkedIn
+        </a>
+        <a href="#" style="display: flex; align-items: center; gap: 6px;">
+          <img src="/icons/researchgate.svg" alt="ResearchGate" width="30" height="30" />
+          ResearchGate
+        </a>
+      </p>
+
+    </div>
+  </div>
+  </div>
+
+</section>
+
+
+  <Section id="updates" title="Updates">
+    <ul class="list">
+      <li><span class="bold">Jun, 2025</span>, I decided to join Eco-treasure Dynamic International (Hong Kong) Limited as an IT Director.</li>
+      <li><span class="bold">Dec, 2024</span>, I attended AGU2024.</li>
+      <li><span class="bold">Apr, 2024</span>, I decided to work as a research assistant in Texas A&M University.</li>
+      <li><span class="bold">Oct, 2023</span>, I attended ACM SIGSPATIAL2023 as the Top 3 winner in ACM GISCup ($2000 funded by US-NSF).</li>
+    </ul>
+  </Section>
+
+  <Section id="research" title="Research">
+    <p>
+      My research interests include <strong>Multimodal remote sensing, Spatiotemperal analysis, Process-based modeling, and Explainable AI. </strong> 
+    </p>
+    <p class="meta"><img src="/research.png" alt="research" class="center-image" /></p>      
+      <ul class="list">
+        <li><strong>Multimodal remote sensing:</strong> Processing, assimilating, and analyzing multispectral,
+          hyperspectral, SAR, LIDAR data from satellies, drones, ground-based sensors, and/or in situ measurements.</li>
+        <li><strong>Spatiotemperal analysis:</strong> Examining patterns, relationships,
+           or trends in data that vary over locations (space) and moments (time) by statistical and geographical methods.</li>
+        <li><strong>Process-based modeling:</strong> Leveraging equations or rules to represent real-world processes
+           (e.g., photosynthesis, evapotranspiration) to explains and predicts
+           how variables change over time by using known physical, biological, or chemical laws, rather than just patterns in data.</li>
+        <li><strong>Explainable AI:</strong> Adopting more reasonable and trustworthy domain knowledge (i.e., a black box to a grey box even to a transparent fish tank) to help debug, improve, or regulate AI models
+        and help users to understand why AI made a certain decision or prediction.</li>
+      </ul>
+  </Section>
+
+  <Section id="startup" title="Startup">
+   <p>
+    I am a co-founder and IT Director of a startup, Eco-treasure Dynamic International (Hong Kong) Limited (hereafter EDI).
+    In this startup, I lead the main projects of <strong>robotic visual solution</strong> and <strong>crop growth modeling</strong> for a state-owned smart farming provider
+    in Jinshan District, Shanghai, China. We EDI are proud to boost local business prosperity with cutting-edge technology in the biggest city of China. 
+   </p>
+   <p class="meta">
+    <img src="/startup.png" alt="startup" class="center-image" />
+   </p>
+
+  </Section>
+
+  <Section id="publications" title="Publications">
+    <ul class="list">
+      <li><strong>Jiawei Wei</strong>, Lian Feng, Yan Tong, Yang Xu, Kun Shi,
+          Long-term observation of global nuclear power plants thermal plumes using Landsat images and deep learning,
+          <strong><em>Remote Sensing of Environment</em></strong>,
+          Volume 295,
+          2023,
+          113707,
+          ISSN 0034-4257,
+           <a href="https://doi.org/10.1016/j.rse.2023.113707 ">https://doi.org/10.1016/j.rse.2023.113707 </a>
+      </li>
+      <li>Haoran Wang, <strong>Jiawei Wei(Corresponding author, Co-first author)</strong>, Xiaoyong Gao, Dexuan Sha, Yiyun Luo, and Junliu Yang. 2023. 
+        Enhanced Mapping of Supraglacial Lakes Through Dual-attention Deep Neural Network. 
+        In  <strong><em>Proceedings of the 31st ACM International Conference on Advances in Geographic Information Systems</em></strong> (SIGSPATIAL '23). 
+        Association for Computing Machinery, New York, NY, USA, Article 17, 1–4. 
+        <a href="https://doi.org/10.1145/3589132.3629972">https://doi.org/10.1145/3589132.3629972</a></li>
+      <li>
+        Zhang, Xin, Qiong Zheng, Lin Zhou, and <strong>Jiawei Wei</strong>. 2018.
+         Nonpoint Pollution Source-Sink Landscape Pattern Change Analysis in a Coastal River Basin in Southeast China,
+         <strong><em>International Journal of Environmental Research and Public Health</em></strong> 15, no. 10: 2115. <a href="https://doi.org/10.3390/ijerph15102115">https://doi.org/10.3390/ijerph15102115</a>
+      </li>
+    </ul>
+  </Section>
+
+  <Section id="reviewer" title="Reviewer">
+    <p>
+      I served as a reviewer for these peer-review journals below.
+    </p>
+    <ul class="list">
+      <li>Environmental Science & Technology <a href="https://pubs.acs.org/journal/esthag">(IF=11.3)</a></li>
+      <li>IEEE Transcations on Geoscience and Remote Sensing <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=36">(IF=8.6)</a></li>
+      <li>International Journal of Applied Earth Observation and Geoinformation <a href="https://www.sciencedirect.com/journal/international-journal-of-applied-earth-observation-and-geoinformation">(IF=8.6)</a></li>
+      <li>Journal of Hydrology: Regional Studies <a href="https://www.sciencedirect.com/journal/journal-of-hydrology-regional-studies">(IF=5.0)</a></li>
+      <li>Science of the Total Environment <a href="https://www.sciencedirect.com/journal/science-of-the-total-environment">(IF=8.0)</a></li>
+      <li>International Journal of Remote Sensing <a href="https://www.tandfonline.com/journals/tres20">(IF=2.6)</a></li>
+      <li>Estuarine, Coastal and Shelf Science <a href="https://www.sciencedirect.com/journal/estuarine-coastal-and-shelf-science">(IF=2.6)</a></li>
+      <li>Geoscience Letters <a href="https://geoscienceletters.springeropen.com/">(IF=4.3)</a></li>
+    </ul>
+  </Section>
+  
+  <Section id="life" title="Life">
+    <p>
+      <span class="bold">Sports:</span> ⚽️ Soccer / 🎾 Pickleball / 🏄🏻‍♂️ Surfing / 🏊🏻 Swimming /
+       🥾 Hiking / 🏸 Badminton / 💪 Body building / 🥋 Taekwondo (Black belt) / 🥋 Brazilian Jujitsu
+    </p>
+    <p>
+      <span class="bold">Music:</span> Classical / R&B / Hip-Hop / Jazz / Country / Electronic / Experimental
+    </p>
+    <p>
+      <span class="bold">Visited countries:</span> 🇺🇸 USA, 🇫🇷 France, 🇩🇪 Germany, 🇯🇵 Japan, 🇱🇦 Laos (to be continued...)
+    </p>
+    <p>
+    <span class="bold">People who I admire:</span> My parents, Elon Musk, Jensen Huang
+    </p>
+  </Section>
+</BaseLayout>
+<Footer />

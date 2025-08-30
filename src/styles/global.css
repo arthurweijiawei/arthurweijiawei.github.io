@@ -1,0 +1,152 @@
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);
+  font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+img{max-width:100%;height:auto}
+
+/* 顶部导航固定 + 半透明背景 */
+.navbar{
+  position:sticky;top:0;z-index:50;
+  backdrop-filter:saturate(180%) blur(8px);
+  background:color-mix(in oklab,var(--bg) 90%, transparent);
+  border-bottom:2px solid var(--border);
+}
+.navbar-inner{height:64px;display:flex;align-items:center;gap:16px}
+.nav{display:flex;gap:14px;align-items:center;margin-left:auto}
+.nav a{padding:6px 10px;border-radius:8px;font-weight: bold;}
+.nav a:hover{background:color-mix(in oklab,var(--fg) 10%, transparent);text-decoration:none}
+
+.section {
+  background-color: #f6f8f3; /* 护眼淡绿，亮色模式 */
+  padding: 40px 0;
+}
+
+html.dark .section {
+  background-color: #1e1e1e; /* 深灰黑，暗色模式 */
+}
+
+
+.title {
+  font-size: 2rem;  /* 可调整为你想要的大小，例如 2.5rem 或 32px */
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.container{width:100%;max-width:var(--container);margin:0 auto;padding:0 20px}
+
+/* intro page */
+.about-section {
+  padding: 20px 0;
+}
+
+.about-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  max-width: var(--container);
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.about-section .title {
+  max-width: var(--container); /* 统一左右宽度 */
+  margin: 0 auto 20px auto;    /* 居中并添加底部间距 */
+  padding: 0 0;             /* 可选：左右留白 */
+}
+
+.avatar {
+  width: 360px;
+  height: 360px;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-top: 20px; 
+}
+
+.about-text {
+  flex: 1;
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 0;
+}
+.about-text a {
+  color: var(--link);
+}
+
+
+/* 列表排版（类似“Updates”） */
+.list{
+  flex: 1;
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 0;
+}
+.list li{margin:8px 0}
+.bold{font-weight:700}
+
+/* 亮色（默认） */
+:root {
+  --bg: #ffffff;
+  --fg: #111111;
+  --muted: #555555;
+  --link: #3b82f6;
+
+  /* 组件里会用到的颜色 */
+  --panel: #ffffff;
+  --border: #e5e7eb;
+  --container: 1000px; /* 内容最大宽度 */
+}
+
+/* 暗色（护眼深灰） */
+html.dark {
+  --bg: #1e1e1e;       /* 深灰，避免纯黑刺眼 */
+  --fg: #e0e0e0;       /* 柔和灰白，替代纯白 */
+  --muted: #a0a0a0;    /* 次级文字 */
+  --link: #80c7e8;     /* 柔和蓝色链接 */
+  --panel: #232323;    /* 卡片背景 */
+  --border: #2f2f2f;   /* 分割线 */
+}
+
+#research {
+  flex: 1;
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 0;
+}
+.meta {
+  text-align: center; /* 让 <img> 居中 */
+}
+
+.center-image {
+  max-width: 80%;    /* 不超过容器宽度 */
+  height: auto;       /* 保持宽高比 */
+  display: inline-block;
+}
+
+#startup {
+  flex: 1;
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+#reviewer {
+  flex: 1;
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+#life {
+  flex: 1;
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* 用变量驱动页面颜色 */
+html, body { background: var(--bg); color: var(--fg); }
+a { color: var(--link); }
+hr, .divider { border-color: var(--border); }
+

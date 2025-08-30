@@ -1,0 +1,27 @@
+---
+const { id, title, subtitle, background = "" } = Astro.props;
+---
+
+<section id={id} class="section" style={background ? 
+`background-image: url('${background}'); background-size: cover; background-position: center; position: relative; color: white;` : ""}>
+  {background && (
+    <div class="overlay"></div>  <!-- 可选遮罩 -->
+  )}
+
+  <div class="container" style="position: relative; z-index: 1;">
+    {title && <h2 class="title">{title}</h2>}
+    {subtitle && <p class="subtitle">{subtitle}</p>}
+    <div class="content">
+      <slot />
+    </div>
+  </div>
+</section>
+
+<style>
+  .overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* 深色遮罩 */
+    z-index: 0;
+  }
+</style>
