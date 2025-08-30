@@ -1,17 +1,16 @@
 <script>
   let navOpen = false;
 
-  function toggleMenu() {
-    navOpen = !navOpen;
+  window.addEventListener("DOMContentLoaded", () => {
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
 
-    // 延迟查找元素，确保它已加载到 DOM
-    setTimeout(() => {
-      const navLinks = document.querySelector('.nav-links');
+    hamburger?.addEventListener('click', () => {
+      navOpen = !navOpen;
       navLinks?.classList.toggle('open', navOpen);
-    }, 0);
-  }
+    });
+  });
 </script>
-
 
 <div class="hamburger" onclick="toggleMenu()">
   <span class="line"></span>
