@@ -124,7 +124,7 @@ html.dark {
 }
 
 .center-image {
-  max-width: 80%;    /* 不超过容器宽度 */
+  max-width: 100%;    /* 不超过容器宽度 */
   height: auto;       /* 保持宽高比 */
   display: inline-block;
 }
