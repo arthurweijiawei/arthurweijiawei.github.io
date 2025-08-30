@@ -84,6 +84,11 @@ html.dark .section {
 }
 .list li{margin:8px 0}
 .bold{font-weight:700}
+a {
+  word-break: break-all;
+  overflow-wrap: break-word;
+}
+
 
 /* 亮色（默认） */
 :root {
@@ -95,7 +100,7 @@ html.dark .section {
   /* 组件里会用到的颜色 */
   --panel: #ffffff;
   --border: #e5e7eb;
-  --container: 1000px; /* 内容最大宽度 */
+  --container: clamp(50%, 80vw, 1000px); /* 内容最大宽度 */
 }
 
 /* 暗色（护眼深灰） */
@@ -146,7 +151,55 @@ html.dark {
 }
 
 /* 用变量驱动页面颜色 */
-html, body { background: var(--bg); color: var(--fg); }
+html, body { background: var(--bg); color: var(--fg);}
 a { color: var(--link); }
 hr, .divider { border-color: var(--border); }
 
+/* 默认桌面端样式 */
+.nav-links {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  margin-left: auto;
+}
+
+/* 移动端：小于768px 或超出容器宽度时 */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* 默认不显示 */
+    flex-direction: column;
+    background: color-mix(in oklab, var(--bg) 95%, transparent);
+    position: absolute;
+    top: 64px; /* 根据你的 navbar 高度调整 */
+    right: 0;
+    left: 0;
+    z-index: 49;
+    padding: 16px;
+    text-align: center;
+  }
+
+  .nav-links.open {
+    display: flex; /* 点击汉堡菜单时显示 */
+  }
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+  }
+
+  .hamburger .line {
+    height: 3px;
+    width: 24px;
+    background-color: var(--fg);
+    border-radius: 2px;
+  }
+}
+
+/* 桌面端：保持 hamburger 隐藏 */
+@media (min-width: 769px) {
+  .hamburger {
+    display: none;
+  }
+}
