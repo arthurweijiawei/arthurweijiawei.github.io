@@ -3,10 +3,15 @@
 
   function toggleMenu() {
     navOpen = !navOpen;
-    const navLinks = document.querySelector('.nav-links');
-    navLinks?.classList.toggle('open', navOpen);
+
+    // 延迟查找元素，确保它已加载到 DOM
+    setTimeout(() => {
+      const navLinks = document.querySelector('.nav-links');
+      navLinks?.classList.toggle('open', navOpen);
+    }, 0);
   }
 </script>
+
 
 <div class="hamburger" onclick="toggleMenu()">
   <span class="line"></span>
