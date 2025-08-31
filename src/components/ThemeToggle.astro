@@ -64,7 +64,11 @@
   };
 
   // 模式：'auto' | 'light' | 'dark'
-  const getMode = () => localStorage.getItem('themeMode') || 'auto';
+  const getMode = () => {
+    localStorage.setItem('themeMode', 'auto'); // 每次刷新强制重设为 auto
+    return 'auto';
+  };
+
   const setMode = (m) => localStorage.setItem('themeMode', m);
 
   // 按模式初始化
