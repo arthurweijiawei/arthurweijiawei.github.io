@@ -4,7 +4,12 @@ import Hamburger from "./Hamburger.astro";
 ---
 <nav class="navbar">
   <div class="container navbar-inner">
-    <a href="#home" style="font-weight:800;color:inherit;text-decoration:none">Jiawei Wei</a>
+    <a href="/" style="display:flex;align-items:center;gap:8px;font-weight:800;color:inherit;text-decoration:none">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M4.5 20 12 4l7.5 16M7.5 14h9" stroke="currentColor" stroke-width="2.25" stroke-linecap="square" stroke-linejoin="miter" />
+      </svg>
+      <span>Jiawei Wei</span>
+    </a>
     <Hamburger />
     <div class="nav nav-links">
       <a href="#about">About</a>
