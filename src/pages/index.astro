@@ -22,7 +22,7 @@ import Footer from '../components/Footer.astro'
   <div class="about-container">
     <img src="/profile_new.jpg" alt="Jiawei Wei" class="avatar" />
     <div class="about-text">
-      <p>Hi there! My name is Jiawei Wei (Arthur). I am working as a Research Assistant at Hong Kong University of Science and Technology since July 2026.</p>
+      <p>Hi there! My name is Jiawei Wei (Arthur), a remote sensing guy. I am working as a Research Assistant at Hong Kong University of Science and Technology since July 2026.</p>
       <p>
         In 2024, I worked as a doctoral research assistant at Texas A&M University. Prior to that, I served as a research assistant at Chinese Academy of Sciences. I obtained my Master's degree from Southern University of Science and Technology,
         advised by Prof. Lian Feng in 2022. I received my Bachelor's degree from Nanjing Tech University in 2019.
@@ -158,5 +158,25 @@ import Footer from '../components/Footer.astro'
     <span class="bold">People who I admire:</span> My parents, Elon Musk, Jensen Huang
     </p>
   </Section>
-</BaseLayout>
+
+  <div class="visitor-map">
+    <script type="text/javascript"
+    id="mapmyvisitors" 
+    src="//mapmyvisitors.com/map.js?d=udQXUGdTNcMp6KCpZU-CtgU7PMRvQdeG0GFuJ9m5MGc&cl=ffffff&w=a"></script>
+  </div>
+  <style>
+  .visitor-map {
+    width: min(90%, 800px);
+    height: 420px;
+    margin: 2rem auto;
+    overflow: hidden;
+  }
+
+  .visitor-map iframe {
+    width: 100% !important;
+    height: 100% !important;
+  }
+</style>
 <Footer />
+</BaseLayout>
+
